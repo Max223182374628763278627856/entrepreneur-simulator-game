@@ -78,7 +78,7 @@ class HUD:
                    x=self.width // 2 + 20, y=y)
 
         # -- Key hints (right edge, small) ------------------------------
-        hint = "[R] Enregistrer  [K] Kit  [S] Virement  [P] Pause"
+        hint = "[R] Reg  [K] Kit  [B] Stock  [L] Local  [+/-] Pub  [S] Virement  [P] Pause"
         hint_surf = self._hint_font.render(hint, True, _DIM)
         surface.blit(hint_surf, (self.width - hint_surf.get_width() - 16,
                                   BAR_HEIGHT // 2 - hint_surf.get_height() // 2))
