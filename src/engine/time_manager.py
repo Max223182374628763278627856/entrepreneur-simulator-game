@@ -46,6 +46,11 @@ class TimeManager:
         for _ in range(minutes_to_advance):
             self._tick_minute()
 
+    def advance_minutes(self, minutes: int) -> None:
+        """Instantly jump forward N game minutes (midnight callbacks fire if crossed)."""
+        for _ in range(minutes):
+            self._tick_minute()
+
     def format_time(self) -> str:
         return f"Jour {self.day}   {self.hour:02d}:{self.minute:02d}"
 
